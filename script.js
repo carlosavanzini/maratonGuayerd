@@ -212,3 +212,75 @@
 //     - Pasarse a VIP: Mostrar en pantalla todos los códigos de pacientes que desean ser VIP
   
 //   - Nota: Escribir código con funciones para facilitar su lectura.
+
+let cortar;
+let valoracionVip=[];
+let pacientesTurnos=[];
+let pacientesQueDeseanSerVip=[]
+
+/*Genero un while para poder dar un corte a l ingreso de clientes*/ 
+while (cortar!=false) {
+        
+let codigoPaciente= parseInt(prompt("Ingrese codigo del paciente desdeeee el 1 al 999"));// pido que ingrese el codigo del clientepara evaluar
+
+function vip(codigo) { //funcion de cliente vip
+        if(codigo>=1 &codigo<=99){
+                let valorVip=parseInt(prompt("Como paciente VIP como valora el servicio? De 1 a 10"));
+                valoracionVip.push(valorVip);
+                pacientesTurnos.unshift(codigoPaciente);
+        }
+}   
+vip(codigoPaciente)
+
+function prepaga(codigo) {//funcion de cliente prepago
+        if(codigo>=100 &codigo<=500){
+                pacientesTurnos.push(codigoPaciente);
+        }
+}
+prepaga(codigoPaciente)
+
+function pacienteNuevo(codigo) {// funcion de paciente nuevo
+        if(codigo>=501 &codigo<=999){
+                let clienteNuevo=prompt("Desea pasarse a VIP? SI/NO");
+                if (clienteNuevo.toLowerCase()==="si") {
+                 pacientesTurnos.push(codigo)  
+                 pacientesQueDeseanSerVip.push(codigo)     
+                }
+        }
+}
+pacienteNuevo(codigoPaciente)
+cortar=confirm("Desea seguir agregando pacientes?")
+}/*termina el while*/
+
+
+////////array para mostrar la mayor calificacion mayor, menor y promedio
+let mayor=0;
+let menor=10;
+let total=0;
+for ( i = 0; i < valoracionVip.length; i++) {
+        if (valoracionVip[i]>mayor) {
+                mayor=valoracionVip[i]             
+        }else if(valoracionVip[i]<menor){
+                menor=valoracionVip[i]        
+        }
+        total= total + valoracionVip[i]
+        
+} 
+alert(`La calificacion mayor es de ${mayor}`)
+alert(`La calificacion menor es de ${menor}`)
+alert(`El promedio de calificacion es igual a ${total/valoracionVip.length}`)
+
+//array para mostrar el orden de ingreso por codigo de paciente
+
+for ( i = 0; i < pacientesTurnos.length; i++) {
+        alert(`El orden de ingreso es la posicion ${i} fue el paciente ${pacientesTurnos[i]}`)
+}
+
+//array para mostrar los pacientes nuevos que desean ser VIP
+let nuevoVip;
+for (i = 0; i < pacientesQueDeseanSerVip.length; i++) {
+         
+         alert(`Los pacientes nuevos que quieren ser vip son el codigo ${ pacientesQueDeseanSerVip[i]}`);
+       
+}
+
