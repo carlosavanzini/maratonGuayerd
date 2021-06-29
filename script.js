@@ -221,7 +221,7 @@ let pacientesQueDeseanSerVip=[]
 /*Genero un while para poder dar un corte a l ingreso de clientes*/ 
 while (cortar!=false) {
         
-let codigoPaciente= parseInt(prompt("Ingrese codigo del paciente desdeeee el 1 al 999"));// pido que ingrese el codigo del clientepara evaluar
+let codigoPaciente= parseInt(prompt("Ingrese codigo del paciente desde el 1 al 999"));// pido que ingrese el codigo del clientepara evaluar
 
 function vip(codigo) { //funcion de cliente vip
         if(codigo>=1 &codigo<=99){
