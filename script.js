@@ -8,13 +8,13 @@
 
 
 // Pedir nombre al usuario y saludarlo. Pasar el texto a Mayúsculas y a Minúsculas. Mostrar ambos en pantalla.
-        // let nombre=prompt("Ingrese un nombre");
-        //         function saludo(nombre) {
-        //             console.log(`Hola como estas ${nombre}`.toLowerCase());
-        //             console.log(`Hola como estas ${nombre}`.toUpperCase());
+                // let nombre=prompt("Ingrese un nombre");
+                // function saludo(nombre) {
+                //     console.log(`Hola como estas ${nombre}`.toLowerCase());
+                //     console.log(`Hola como estas ${nombre}`.toUpperCase());
                 
-        //         }
-        //         saludo(nombre)
+                // }
+                // saludo(nombre)
 
 //  Pedir al usuario dos números y mostrar la suma y resta de ellos. Para la resta, restar siempre al más grande el más chico.
 
@@ -33,14 +33,16 @@
         // operaciones(n1,n2)
 // Ingresar un texto. Preguntar si quiere ver el resultado en pantalla (alert) o consola (console.log). Pasar el texto a MAYUSCULA y mostrar donde corresponda.
 
-        // let texto= prompt("ingrese un texto por favor");
-        // let ver=parseInt(prompt("Por donde quiero ver el texto: \n1)Alert\n2)Console.log"))
-
-        // if (ver===1) {
-        //         alert(texto.toUpperCase())
-        // } else {
-        //         console.log(texto.toUpperCase())
-        // }
+//         let texto= prompt("ingrese un texto por favor");
+//         let ver=parseInt(prompt("Por donde quiero ver el texto: \n1)Alert\n2)Console.log"))
+//         function mostrar(texto,ver) {
+//                 if (ver===1) {
+//                         alert(texto.toUpperCase())
+//                 } else {
+//                         console.log(texto.toUpperCase())
+//                 }   
+//         }
+//        mostrar(texto,ver)
 
 //  Calculadora. Pedir ingresar dos números. Luego ingresar una operación (SUMA/RESTA/MULTI/DIV/POTENCIA). Realizar la operación y mostrar el resultado en pantalla.
         //  let n1=parseInt(prompt("ingrese el primer numero"));
@@ -111,12 +113,12 @@
 //  Agregar alumnos/as a un curso. Vamos a pedirle al usuario que ingrese nombres de alumnos/as para el nuevo curso. Continuar guardando nombres HASTA que el usuario ingrese SALIR. Mostrar todos los nombres en pantalla. 
         // let array=[];
         // let alumnos;
-        //  function curso() {
+        //  function curso(alumnos) {
         //     while (alumnos!="exit"){
         //         array.push(alumnos);
-        //         alumnos= prompt("Ingrese los nombre de los alumnos para el curso, precione salir para finalizar proceso")
+        //         alumnos= prompt("Ingrese los nombre de los alumnos para el curso, escriba exit para finalizar proceso")
                 
-        //     } alert(`Los nombre de los alumnos son ${array}`)
+        //     } alert(`Los nombre de los alumnos son: ${array}`)
         // }
         // curso(alumnos)
 
@@ -142,9 +144,8 @@
         //          for (let i = 0; i < ej8Mascotas.length; i++) {
         //                 if(ej8Mascotas[i]==="Gertrudis"){
         //                         alert("Hay que vacunar contra la rabia")
-        //                 }
-        //                 else if (ej8Mascotas[i].length>6 ) {
-        //                          alert("Nombre largo")
+        //                 }else if (ej8Mascotas[i].length>6 ) {
+        //                         alert("Nombre largo")
         //                 }else if (ej8Mascotas[i].length<=3) {
         //                         alert("Nombre corto")
         //                 }else if (ej8Mascotas[i]==="Fido" ) {
@@ -153,8 +154,7 @@
         //                         alert("Entregar alimento balanceado")
         //                 }else if(ej8Mascotas[i]==="Gertrudis" && ej8Mascotas[i].length>6){
         //                         alert("Hay que vacunar contra la rabia")
-        //                 }
-                        
+        //                 }  
         //          }
         //  }
         // perros(ej8Mascotas)
@@ -163,7 +163,7 @@
 // - Cada menor de edad pagará el menú $450 y cada adulto, $700. 
 // - Si el grupo tiene más de 4 adultos, se hará un 10% al total de la factura. 
 // Mostrar por pantalla la cantidad de comensales y el costo total a pagar. 
-        //  const ej9restaurant = [25,17,18,44,12,9,36,50]
+        // const ej9restaurant = [25,17,18,44,12,9,36,50]
         // let cantidadMenor=0;
         // let cantidadMayor=0;
 
@@ -213,74 +213,74 @@
   
 //   - Nota: Escribir código con funciones para facilitar su lectura.
 
-let cortar;
-let valoracionVip=[];
-let pacientesTurnos=[];
-let pacientesQueDeseanSerVip=[]
+// let cortar;
+// let valoracionVip=[];
+// let pacientesTurnos=[];
+// let pacientesQueDeseanSerVip=[]
 
-/*Genero un while para poder dar un corte a l ingreso de clientes*/ 
-while (cortar!=false) {
+// /*Genero un while para poder dar un corte a l ingreso de clientes*/ 
+// while (cortar!=false) {
         
-let codigoPaciente= parseInt(prompt("Ingrese codigo del paciente desde el 1 al 999"));// pido que ingrese el codigo del clientepara evaluar
+// let codigoPaciente= parseInt(prompt("Ingrese codigo del paciente desde el 1 al 999"));// pido que ingrese el codigo del clientepara evaluar
 
-function vip(codigo) { //funcion de cliente vip
-        if(codigo>=1 &codigo<=99){
-                let valorVip=parseInt(prompt("Como paciente VIP como valora el servicio? De 1 a 10"));
-                valoracionVip.push(valorVip);
-                pacientesTurnos.unshift(codigoPaciente);
-        }
-}   
-vip(codigoPaciente)
+// function vip(codigo) { //funcion de cliente vip
+//         if(codigo>=1 &codigo<=99){
+//                 let valorVip=parseInt(prompt("Como paciente VIP como valora el servicio? De 1 a 10"));
+//                 valoracionVip.push(valorVip);
+//                 pacientesTurnos.unshift(codigoPaciente);
+//         }
+// }   
+// vip(codigoPaciente)
 
-function prepaga(codigo) {//funcion de cliente prepago
-        if(codigo>=100 &codigo<=500){
-                pacientesTurnos.push(codigoPaciente);
-        }
-}
-prepaga(codigoPaciente)
+// function prepaga(codigo) {//funcion de cliente prepago
+//         if(codigo>=100 &codigo<=500){
+//                 pacientesTurnos.push(codigoPaciente);
+//         }
+// }
+// prepaga(codigoPaciente)
 
-function pacienteNuevo(codigo) {// funcion de paciente nuevo
-        if(codigo>=501 &codigo<=999){
-                let clienteNuevo=prompt("Desea pasarse a VIP? SI/NO");
-                if (clienteNuevo.toLowerCase()==="si") {
-                 pacientesTurnos.push(codigo)  
-                 pacientesQueDeseanSerVip.push(codigo)     
-                }
-        }
-}
-pacienteNuevo(codigoPaciente)
-cortar=confirm("Desea seguir agregando pacientes?")
-}/*termina el while*/
+// function pacienteNuevo(codigo) {// funcion de paciente nuevo
+//         if(codigo>=501 &codigo<=999){
+//                 let clienteNuevo=prompt("Desea pasarse a VIP? SI/NO");
+//                 if (clienteNuevo.toLowerCase()==="si") {
+//                  pacientesTurnos.push(codigo)  
+//                  pacientesQueDeseanSerVip.push(codigo)     
+//                 }
+//         }
+// }
+// pacienteNuevo(codigoPaciente)
+// cortar=confirm("Desea seguir agregando pacientes?")
+// }/*termina el while*/
 
 
-////////array para mostrar la mayor calificacion mayor, menor y promedio
-let mayor=0;
-let menor=10;
-let total=0;
-for ( i = 0; i < valoracionVip.length; i++) {
-        if (valoracionVip[i]>mayor) {
-                mayor=valoracionVip[i]             
-        }else if(valoracionVip[i]<menor){
-                menor=valoracionVip[i]        
-        }
-        total= total + valoracionVip[i]
+// ////////array para mostrar la mayor calificacion mayor, menor y promedio
+// let mayor=0;
+// let menor=10;
+// let total=0;
+// for ( i = 0; i < valoracionVip.length; i++) {
+//         if (valoracionVip[i]>mayor) {
+//                 mayor=valoracionVip[i]             
+//         }else if(valoracionVip[i]<menor){
+//                 menor=valoracionVip[i]        
+//         }
+//         total= total + valoracionVip[i]
         
-} 
-alert(`La calificacion mayor es de ${mayor}`)
-alert(`La calificacion menor es de ${menor}`)
-alert(`El promedio de calificacion es igual a ${total/valoracionVip.length}`)
+// } 
+// alert(`La calificacion mayor es de ${mayor}`)
+// alert(`La calificacion menor es de ${menor}`)
+// alert(`El promedio de calificacion es igual a ${total/valoracionVip.length}`)
 
-//array para mostrar el orden de ingreso por codigo de paciente
+// //array para mostrar el orden de ingreso por codigo de paciente
 
-for ( i = 0; i < pacientesTurnos.length; i++) {
-        alert(`El orden de ingreso es la posicion ${i} fue el paciente ${pacientesTurnos[i]}`)
-}
+// for ( i = 0; i < pacientesTurnos.length; i++) {
+//         alert(`El orden de ingreso es la posicion ${i} fue el paciente ${pacientesTurnos[i]}`)
+// }
 
-//array para mostrar los pacientes nuevos que desean ser VIP
-let nuevoVip;
-for (i = 0; i < pacientesQueDeseanSerVip.length; i++) {
+// //array para mostrar los pacientes nuevos que desean ser VIP
+// let nuevoVip;
+// for (i = 0; i < pacientesQueDeseanSerVip.length; i++) {
          
-         alert(`Los pacientes nuevos que quieren ser vip son el codigo ${ pacientesQueDeseanSerVip[i]}`);
+//          alert(`Los pacientes nuevos que quieren ser vip son el codigo ${ pacientesQueDeseanSerVip[i]}`);
        
-}
+// }
 
